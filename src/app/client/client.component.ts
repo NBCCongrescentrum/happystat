@@ -27,7 +27,16 @@ export class ClientComponent implements OnInit {
   }
 
   add(amount: number){
-    this.apiService.add(this.id, amount);
+
+    var userinfo: any;
+
+    this.apiService.add(this.id, amount).subscribe(
+      data => { userinfo = data },
+      err => console.log('error'),
+      () => {
+        console.log('done');
+      }
+    );
   }
 
 }
