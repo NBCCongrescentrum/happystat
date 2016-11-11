@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map'
 export class ApiService {
 
   headers: any = new Headers({ 'Content-Type': 'application/json' });
-  root: string = 'http://happy-stat.herokuapp.com/';
+  root: string = 'https://happy-stat.herokuapp.com';
 
   constructor(private http:Http) {}
 
@@ -15,7 +15,7 @@ export class ApiService {
     console.log('should add '+amount+' to campaign '+id);
     console.log(this.root+'api/locations/'+id+"/score");
     console.log(JSON.stringify(score));
-    return this.http.post(this.root+'api/locations/'+id+"/score", JSON.stringify(score), this.headers).map(response => response.json);
+    return this.http.post(this.root+'/api/locations/'+id+"/score", JSON.stringify(score), this.headers).map(response => response.json);
   }
 
 }
