@@ -12,6 +12,6 @@ const routes: Route[] = [
 export const routing: ModuleWithProviders = RouterModule.forRoot(
   routes,
   {
-    useHash: false
+    useHash: true
   }
 );
