@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { ProfileComponent } from './profile.component';
+import { StatsComponent } from './stats.component';
 import { CommonModule } from '@angular/common';
-import { routing } from './profile.routing';
+import { routing } from './stats.routing';
 
 @NgModule({
   imports: [
@@ -9,11 +9,10 @@ import { routing } from './profile.routing';
     routing
   ],
   declarations: [
-    ProfileComponent
+    StatsComponent
   ],
   bootstrap: [
-    ProfileComponent
+    StatsComponent
   ]
 })
-
-export class ProfileModule {}
+export class StatsModule {}
