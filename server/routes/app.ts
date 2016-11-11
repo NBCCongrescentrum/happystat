@@ -26,7 +26,7 @@ export class AppRouter {
                         scoreTotal += score.score;
                     }
 
-                    cijfer = (scoreTotal / numberOfScores) / 10;
+                    cijfer = parseInt(((scoreTotal / numberOfScores) / 10).toFixed(2));
                 }
                 
 
@@ -61,13 +61,15 @@ export class AppRouter {
             var name = request.params.name;
             const location = await Location.findOne({'name' : name}).lean().exec();
 
+            
+
             // Create new score 
             var newScore = request.body;
             newScore.location = (location as any)._id;
             
             const score = await Score.create(newScore);
 
-            response.status(200).json(score);
+            response.status(200).json(request.body);
         });
 
         // Get all scores for a specific location

@@ -21,6 +21,10 @@ app.use(cors({
   origin: 'http://localhost:4200'
 }));
 
+app.use(cors({
+  origin: 'http://localhost:4200'
+}));
+
 // app.set('env', 'production');
 
 // api routes
