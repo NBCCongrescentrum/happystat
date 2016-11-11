@@ -6,6 +6,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreLogMonitorModule, useLogMonitor } from '@ngrx/store-log-monitor';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { ApiService } from './services/api.service';
+
 
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
@@ -33,7 +35,9 @@ import { FeedEffects } from './store/feed/feed.effects';
     StoreLogMonitorModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    ApiService
+  ],
   bootstrap: [
     AppComponent
   ]
