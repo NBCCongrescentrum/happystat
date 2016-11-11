@@ -21,9 +21,9 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-6 text-center well well-md" *ngFor="let location of locations">
-      <h1 style="font-size: 40px;">{{ location.score }}</h1>
+    <div class="col-xs-6 text-center well well-sm" *ngFor="let location of locations">
       <p><span class="label label-primary">{{ location.name}}</span></p>
+      <h1 style="font-size: 60px;">{{ location.score }}</h1>
       <p><b>{{ location.question }}</b></p>
     </div>
   </div>
