@@ -14,7 +14,6 @@ export class AppRouter {
             const locations = await Location.find({}).lean().exec();
 
             response.json(locations)
-
         });
 
         // Get location by name
@@ -25,7 +24,6 @@ export class AppRouter {
             const location = await Location.findOne({'name' : name}).lean().exec();
 
             response.json(location);
-
         });
 
         // Create a new location
@@ -69,36 +67,3 @@ export class AppRouter {
         return this.router;
     }
 }
-
-
-
-// const appRouter: Router = Router();
-
-// /**
-//  * Get all locations
-//  */
-// appRouter.get('/locations', function (request: Request, response: Response) {
-
-//     response.json({
-//         test : 'Jens Hoevenaars'
-//     });
-// });
-
-// /**
-//  * Get location by name 
-//  */
-// appRouter.get('/locations', function (request: Request, response: Response) {
-
-// });
-
-// /**
-//  * Create new location
-//  */
-// appRouter.post('/location', function (request: Request, response: Response) {
-    
-//     const location = await Location.create(request.body);
-
-//     response.status(200).json(location);
-// });
-
-// export { appRouter }
