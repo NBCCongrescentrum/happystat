@@ -8,7 +8,6 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { ApiService } from './services/api.service';
 
-
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 import { feedReducer } from './store/feed/feed.reducer';
