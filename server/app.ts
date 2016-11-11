@@ -3,11 +3,10 @@ import { json, urlencoded } from 'body-parser';
 import * as path from 'path';
 import * as cors from 'cors';
 import * as compression from 'compression';
+import * as mongoose from 'mongoose';
 
-import { loginRouter } from './routes/login';
-import { protectedRouter } from './routes/protected';
-import { publicRouter } from './routes/public';
-import { feedRouter } from './routes/feed';
+// Import app router
+import { AppRouter } from './routes/app';
 
 const app: express.Application = express();
 
@@ -25,10 +24,7 @@ app.use(cors({
 // app.set('env', 'production');
 
 // api routes
-app.use('/api/secure', protectedRouter);
-app.use('/api/login', loginRouter);
-app.use('/api/public', publicRouter);
-app.use('/api/feed', feedRouter);
+app.use('/api', new AppRouter().getRouter());
 
 if (app.get('env') === 'production') {
 
