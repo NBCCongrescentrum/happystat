@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row text-center">
-    <h1>{{ id }}</h1>
+    <h1 style="text-transform: capitalize">{{ id }}</h1>
   </div>
 
   <div class="text-center">
@@ -22,7 +22,7 @@
       <div class="col-sm-2">
         <h3>Heel slecht</h3>
         <p>
-          <button type="button" class="btn btn-danger btn-lg"><img
+          <button (click)="add(0)" type="button" class="btn btn-danger btn-lg"><img
             src="https://www.clipartsgram.com/image/196949517-491537775-classic-emoticonsangry-facesimple-black512x512.png"
             alt="HTML5 Icon" style="width:128px;height:128px;"></button>
         </p>
@@ -30,7 +30,7 @@
       <div class="col-sm-2">
         <h3>Slecht</h3>
         <p>
-          <button type="button" class="btn btn-warning btn-lg"><img
+          <button (click)="add(25)" type="button" class="btn btn-warning btn-lg"><img
             src="http://www.clipartbest.com/cliparts/9iz/ozp/9izozpeAT.gif" alt="HTML5 Icon"
             style="width:128px;height:128px;"></button>
         </p>
@@ -38,7 +38,7 @@
       <div class="col-sm-2">
         <h3>Voldoende</h3>
         <p>
-          <button type="button" class="btn btn-default btn-lg"><img
+          <button (click)="add(50)" type="button" class="btn btn-default btn-lg"><img
             src="https://image.freepik.com/freie-ikonen/emoticon-mit-geraden-mund-linie_318-47272.jpg" alt="HTML5 Icon"
             style="width:128px;height:128px;"></button>
         </p>
@@ -47,7 +47,7 @@
       <div class="col-sm-2">
         <h3>Goed</h3>
         <p>
-          <button type="button" class="btn btn-info btn-lg"><img
+          <button (click)="add(75)" type="button" class="btn btn-info btn-lg"><img
             src="http://simpleicon.com/wp-content/uploads/smile.png" alt="HTML5 Icon" style="width:128px;height:128px;">
           </button>
         </p>
@@ -55,7 +55,7 @@
       <div class="col-sm-2">
         <h3>Geweldig</h3>
         <p>
-          <button type="button" class="btn btn-success btn-lg"><img
+          <button (click)="add(100)" type="button" class="btn btn-success btn-lg"><img
             src="http://2.bp.blogspot.com/-C6jk7_J8X0A/UiB-P7jHwRI/AAAAAAAAEgU/31UCwpj8u_Y/s1600/emoticon-24-512.gif"
             alt="HTML5 Icon" style="width:128px;height:128px;"></button>
         </p>
