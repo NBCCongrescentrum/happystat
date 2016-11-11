@@ -26,7 +26,7 @@ export class AppRouter {
                         scoreTotal += score.score;
                     }
 
-                    cijfer = (scoreTotal / numberOfScores) / 10;
+                    cijfer = parseInt(((scoreTotal / numberOfScores) / 10).toFixed(2));
                 }
                 
 
