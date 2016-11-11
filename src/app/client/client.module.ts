@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { ProfileComponent } from './profile.component';
+import { ClientComponent } from './client.component';
 import { CommonModule } from '@angular/common';
-import { routing } from './profile.routing';
+import { routing } from './client.routing';
 
 @NgModule({
   imports: [
@@ -9,11 +9,10 @@ import { routing } from './profile.routing';
     routing
   ],
   declarations: [
-    ProfileComponent
+    ClientComponent
   ],
   bootstrap: [
-    ProfileComponent
+    ClientComponent
   ]
 })
-
-export class ProfileModule {}
+export class ClientModule {}
