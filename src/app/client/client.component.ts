@@ -1,7 +1,7 @@
 import { Component, OnInit }        from '@angular/core';
 import { Router, ActivatedRoute }   from '@angular/router';
 import { Http, Headers }            from "@angular/http";
-import { ApiService }               from 'services/api.service';
+import { ApiService }               from '../services/api.service';
 
 
 @Component({
