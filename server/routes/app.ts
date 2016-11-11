@@ -11,7 +11,27 @@ export class AppRouter {
         // Get all locations
         this.router.get("/locations", async(request: Request, response: Response) => {
 
-            const locations = await Location.find({}).lean().exec();
+            const locations = await Location.find({}).exec();
+
+            for ( let location of locations ) {
+                var scores = await Score.findAllByLocation(String(location._id));
+
+                var numberOfScores = 0;
+                var scoreTotal = 0;
+                var cijfer = 0;
+
+                if ( scores.length ) {
+                    for ( let score of scores ) {
+                        numberOfScores++;
+                        scoreTotal += score.score;
+                    }
+
+                    cijfer = (scoreTotal / numberOfScores) / 10;
+                }
+                
+
+                location.score = cijfer;
+            }
 
             response.json(locations)
         });
