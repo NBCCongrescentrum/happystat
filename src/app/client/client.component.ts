@@ -1,7 +1,7 @@
 import { Component, OnInit }        from '@angular/core';
 import { Router, ActivatedRoute }   from '@angular/router';
 import { Http, Headers }            from "@angular/http";
-import { ApiService }               from 'services/api.service';
+// import { ApiService }               from 'services/api.service';
 
 
 @Component({
@@ -17,7 +17,7 @@ export class ClientComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private apiService: ApiService,
+    // private apiService: ApiService,
     private http: Http ) {}
 
   ngOnInit(){
@@ -27,7 +27,7 @@ export class ClientComponent implements OnInit {
   }
 
   add(amount: number){
-    this.apiService.add(this.id, amount);
+    // this.apiService.add(this.id, amount);
   }
 
 }
