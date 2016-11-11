@@ -14,6 +14,11 @@ const schema = new Schema({
     question: {
         type: String,
         required: true
+    },
+    score: {
+        type: Number,
+        default: 0,
+        required: false
     }
 });
 
