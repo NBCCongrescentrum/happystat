@@ -22,18 +22,6 @@ export class ClientComponent implements OnInit {
     private apiService: ApiService,
     private http: Http ) {}
 
-  ngOnInit(){
-    var reply: any;
-
-    this.sub = this.route.params.subscribe(params => {
-      this.id = params['id'];
-    });
-
-    this.getLocation(this.id).then(
-      location => this.question = location.question,
-      error => this.errorMessage = <any>error);
-  }
-
   getLocation(location: string) {
     return this.http.get('https://happy-stat.herokuapp.com/api/locations/'+location)
       .toPromise()
@@ -49,6 +37,18 @@ export class ClientComponent implements OnInit {
   private handleError(error: Response | any) {
     console.log(error);
     return Promise.reject(error);
+  }
+
+  ngOnInit(){
+    var reply: any;
+
+    this.sub = this.route.params.subscribe(params => {
+      this.id = params['id'];
+    });
+
+    this.getLocation(this.id).then(
+      location => this.question = location.question,
+      error => this.errorMessage = <any>error);
   }
 
   add(amount: number){

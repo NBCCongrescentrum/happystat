@@ -15,7 +15,7 @@ export class ApiService {
     // console.log('should add '+amount+' to campaign '+id);
     // console.log(this.root+'/api/locations/'+id+"/score");
     // console.log(JSON.stringify(score));
-    return this.http.post(this.root+'/api/locations/'+id+"/score", JSON.stringify(score), this.headers).map(response => response.json);
+    return this.http.post(this.root+'/api/locations/'+id+"/score", score, this.headers).map(response => response.json);
   }
 
   getCampaign(id: string) {
