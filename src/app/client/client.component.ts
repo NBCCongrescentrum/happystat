@@ -35,6 +35,7 @@ export class ClientComponent implements OnInit {
       err => console.log('error'),
       () => {
         console.log('done');
+        alert("Thank you for your feedback!");
       }
     );
   }
