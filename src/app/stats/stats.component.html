@@ -13,7 +13,7 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Dashbooard</a></li>
+        <li class="active"><a href="#">Dashboard</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
@@ -21,13 +21,10 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-6 text-center well well-md">
-      <h1>8.1</h1>
-      <p>Restaurant Y</p>
-    </div>
-    <div class="col-xs-6 text-center well well-md">
-      <h1>8.1</h1>
-      <p>Toilet</p>
+    <div class="col-xs-6 text-center well well-md" *ngFor="let location of locations">
+      <h1 style="font-size: 40px;">{{ location.score }}</h1>
+      <p><span class="label label-primary">{{ location.name}}</span></p>
+      <p><b>{{ location.question }}</b></p>
     </div>
   </div>
 </div>
