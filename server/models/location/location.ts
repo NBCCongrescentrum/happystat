@@ -4,6 +4,7 @@ import { Schema, Document, Model, model } from "mongoose";
 export interface ILocation extends Document {
     name: string;
     question: string;
+    score: number;
 }
 
 const schema = new Schema({

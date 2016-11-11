@@ -14,7 +14,7 @@ export class AppRouter {
             const locations = await Location.find({}).exec();
 
             for ( let location of locations ) {
-                var scores = await Score.findAllByLocation(String(location._id));
+                var scores = (await Score.findAllByLocation(String(location._id)) as any);
 
                 var numberOfScores = 0;
                 var scoreTotal = 0;
