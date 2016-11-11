@@ -43,7 +43,7 @@ export class AppRouter {
 
             // Create new score 
             var newScore = request.body;
-            newScore.location = location._id;
+            newScore.location = (location as any)._id;
             
             const score = await Score.create(newScore);
 
@@ -56,10 +56,8 @@ export class AppRouter {
             // Find location
             var name = request.params.name;
             const location = await Location.findOne({'name' : name}).lean().exec();
-            
-            console.log(location._id);
 
-            const scores = await Score.findAllByLocation(String(location._id));
+            const scores = await Score.findAllByLocation(String((location as any)._id));
 
             response.status(200).json(scores);
         });
