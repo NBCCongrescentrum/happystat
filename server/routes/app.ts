@@ -61,7 +61,7 @@ export class AppRouter {
             var name = request.params.name;
             const location = await Location.findOne({'name' : name}).lean().exec();
 
-            console.log(request.body);
+            
 
             // Create new score 
             var newScore = request.body;
@@ -69,7 +69,7 @@ export class AppRouter {
             
             const score = await Score.create(newScore);
 
-            response.status(200).json(score);
+            response.status(200).json(request.body);
         });
 
         // Get all scores for a specific location
