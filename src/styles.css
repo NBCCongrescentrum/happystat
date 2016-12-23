@@ -4,8 +4,37 @@
   padding: 20px;
 }
 
-.bar-test {
-  background-color: #000;
-  height: 20px;
-  width: 100%;
+.red {
+  color: #b71c1c;
+}
+.red-bg {
+  background-color: #b71c1c;
+}
+
+.amber {
+  color: #ff8f00;
+}
+.amber-bg {
+  background-color: #ff8f00;
+}
+
+.yellow {
+  color: #ffea00;
+}
+.yellow-bg {
+  background-color: #ffea00;
+}
+
+.lime {
+  color: #b2ff59;
+}
+.lime-bg {
+  background-color: #b2ff59;
+}
+
+.green {
+  color: #64dd17;
+}
+.green-bg {
+  background-color: #64dd17;
 }

@@ -1,3 +1,83 @@
+<div class="stats">
+  <div layout="column" layout-align="center stretch">
+    <md-card class="text-center">
+      <md-card-header>
+        <span class="md-title">Scores given</span>
+      </md-card-header>
+      <md-card-content>
+        <h1 class="stat-total">{{ scores.length }}</h1>
+      </md-card-content>
+    </md-card>
+    <md-card class="text-center">
+      <md-card-header>
+        <span class="md-title">Average score</span>
+      </md-card-header>
+      <md-card-content>
+        <h1 class="stat-total">{{ averageScore }}</h1>
+      </md-card-content>
+    </md-card>
+    <md-card class="text-center">
+      <md-card-header>
+        <span class="md-title">Stats</span>
+      </md-card-header>
+      <md-card-content>
+        <table>
+          <tr class="red">
+            <td><md-icon class="red">sentiment_very_dissatisfied</md-icon></td>
+            <td><div class="bar red-bg" [style.width]="percentage1+'%'">{{ scoresOf1.length }}</div></td>
+          </tr>
+          <tr class="amber">
+            <td><md-icon class="amber">sentiment_dissatisfied</md-icon></td>
+            <td><div class="bar amber-bg" [style.width]="percentage25+'%'">{{ scoresOf25.length }}</div></td>
+          </tr>
+          <tr class="yellow">
+            <td><md-icon class="yellow">sentiment_neutral</md-icon></td>
+            <td><div class="bar yellow-bg" [style.width]="percentage50+'%'">{{ scoresOf50.length }}</div></td>
+          </tr>
+          <tr class="lime">
+            <td><md-icon class="lime">sentiment_satisfied</md-icon></td>
+            <td><div class="bar lime-bg" [style.width]="percentage75+'%'">{{ scoresOf75.length }}</div></td>
+          </tr>
+          <tr class="green">
+            <td><md-icon class="green">sentiment_very_satisfied</md-icon></td>
+            <td><div class="bar green-bg" [style.width]="percentage100+'%'">{{ scoresOf100.length }}</div></td>
+          </tr>
+        </table>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>
+
+
+<!--
+<div class="stats">
+  <div class="card">
+    <h1><small>Total votes</small>{{ scores.length }}</h1>
+  </div>
+
+  <div class="card">
+    <h1><small>Average vote</small>{{ averageScore }}</h1>
+  </div>
+
+  <div class="card">
+    <ul>
+      <li><md-icon class="red">sentiment_very_dissatisfied</md-icon><div class="bar-test" [style.width]="percentage1+'%'"></div></li>
+      <li><md-icon class="amber">sentiment_dissatisfied</md-icon><div class="bar-test" [style.width]="percentage25+'%'"></div></li>
+      <li><md-icon class="yellow">sentiment_neutral</md-icon><div class="bar-test" [style.width]="percentage50+'%'"></div></li>
+      <li><md-icon class="lime">sentiment_satisfied</md-icon><div class="bar-test" [style.width]="percentage75+'%'"></div></li>
+      <li> <md-icon class="green">sentiment_very_satisfied</md-icon><div class="bar-test" [style.width]="percentage100+'%'"></div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="vote-stream" id="live-feed">
+      <ul>
+        <li *ngFor="let score of scores">{{ score }}</li>
+      </ul>
+    </div>
+  </div>
+</div>-->
+<!--
 <div class="container">
   <div class="row">
     <div class="col-sm-12 text-center">
@@ -27,5 +107,5 @@
     </div>
   </div>
 </div>
-
+-->
 
