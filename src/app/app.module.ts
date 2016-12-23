@@ -14,6 +14,8 @@ import { routing } from './app.routing';
 import { feedReducer } from './store/feed/feed.reducer';
 import { FeedEffects } from './store/feed/feed.effects';
 
+import { MaterialModule } from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -34,7 +36,8 @@ import { FeedEffects } from './store/feed/feed.effects';
     }),
     EffectsModule.run(FeedEffects),
     StoreLogMonitorModule,
-    HttpModule
+    HttpModule,
+    MaterialModule.forRoot()
   ],
   providers: [
     StatsService

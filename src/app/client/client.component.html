@@ -1,5 +1,39 @@
-<button (click)="registerScore(1)">1</button>
-<button (click)="registerScore(25)">25</button>
-<button (click)="registerScore(50)">50</button>
-<button (click)="registerScore(75)">75</button>
-<button (click)="registerScore(100)">100</button>
+<div class="body">
+  <div class="container">
+    <md-card>
+      <h1>HOE BEVALT DE KERSTBORREL?</h1>
+      <hr>
+      <md-grid-list cols="5">
+        <md-grid-tile>
+          <button md-button (click)="add(1)">
+            <md-icon class="red">sentiment_very_dissatisfied</md-icon>
+          </button>
+        </md-grid-tile>
+
+        <md-grid-tile>
+          <button md-button (click)="add(25)">
+            <md-icon class="amber">sentiment_dissatisfied</md-icon>
+          </button>
+        </md-grid-tile>
+
+        <md-grid-tile>
+          <button md-button (click)="add(50)">
+            <md-icon class="yellow">sentiment_neutral</md-icon>
+          </button>
+        </md-grid-tile>
+
+        <md-grid-tile>
+          <button md-button (click)="add(75)">
+            <md-icon class="lime">sentiment_satisfied</md-icon>
+          </button>
+        </md-grid-tile>
+
+        <md-grid-tile>
+          <button md-button (click)="add(100)">
+            <md-icon class="green">sentiment_very_satisfied</md-icon>
+          </button>
+        </md-grid-tile>
+      </md-grid-list>
+    </md-card>
+  </div>
+</div>

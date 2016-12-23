@@ -1,0 +1,49 @@
+.material-icons {
+  font-size: 15rem;
+}
+
+md-icon {
+  width: 15rem;
+  height: 15rem;
+}
+
+button {
+  background: #fff;
+}
+
+.red {
+  color: #b71c1c;
+}
+
+.amber {
+  color: #ff8f00;
+}
+
+.yellow {
+  color: #ffea00;
+}
+
+.lime {
+  color: #b2ff59;
+}
+
+.green {
+  color: #64dd17;
+}
+
+md-card {
+  background: #fff;
+  text-align: center;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: url('http://www.nbccongrescentrum.nl/wp-content/uploads/2015/03/xThe-Y-7.jpg.pagespeed.ic.QhX9DKhB8r.jpg') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
