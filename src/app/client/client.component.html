@@ -1,79 +1,120 @@
+<div class="body">
 
-
-<md-grid-list cols="5" [style.background]="'white'">
-  <md-grid-tile><md-icon>sentiment_very_dissatisfied</md-icon></md-grid-tile>
-  <md-grid-tile><md-icon>sentiment_dissatisfied</md-icon></md-grid-tile>
-  <md-grid-tile><md-icon>sentiment_neutral</md-icon></md-grid-tile>
-  <md-grid-tile><md-icon>sentiment_satisfied</md-icon></md-grid-tile>
-  <md-grid-tile><md-icon>sentiment_very_satisfied</md-icon></md-grid-tile>
-</md-grid-list>
-
-<div class="container">
-  <div class="row text-center">
-    <h1 style="text-transform: capitalize">{{ id }}</h1>
-  </div>
-
-  <div class="text-center">
-
-    <div class="row row-centered">
-      <h2>{{ question }}</h2>
-    </div>
-
-
-    <div class="container">
-      <div class="container-centered">
-
-
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-1"></div>
-
-      <div class="col-sm-2">
-        <h3>Heel slecht</h3>
-        <p>
-          <button (click)="add(1)" type="button" class="btn btn-danger btn-lg"><img
-            src="https://www.clipartsgram.com/image/196949517-491537775-classic-emoticonsangry-facesimple-black512x512.png"
-            alt="HTML5 Icon" style="width:128px;height:128px;"></button>
-        </p>
-      </div>
-      <div class="col-sm-2">
-        <h3>Slecht</h3>
-        <p>
-          <button (click)="add(25)" type="button" class="btn btn-warning btn-lg"><img
-            src="http://www.clipartbest.com/cliparts/9iz/ozp/9izozpeAT.gif" alt="HTML5 Icon"
-            style="width:128px;height:128px;"></button>
-        </p>
-      </div>
-      <div class="col-sm-2">
-        <h3>Voldoende</h3>
-        <p>
-          <button (click)="add(50)" type="button" class="btn btn-default btn-lg"><img
-            src="https://image.freepik.com/freie-ikonen/emoticon-mit-geraden-mund-linie_318-47272.jpg" alt="HTML5 Icon"
-            style="width:128px;height:128px;"></button>
-        </p>
-        <p></p>
-      </div>
-      <div class="col-sm-2">
-        <h3>Goed</h3>
-        <p>
-          <button (click)="add(75)" type="button" class="btn btn-info btn-lg"><img
-            src="http://simpleicon.com/wp-content/uploads/smile.png" alt="HTML5 Icon" style="width:128px;height:128px;">
+  <div class="container">
+    <md-card>
+      <h1>HOE BEVALT DE KERSTBORREL?</h1>
+      <hr>
+      <md-grid-list cols="5">
+        <md-grid-tile>
+          <button md-button>
+            <md-icon class="red" (click)="add(1)">sentiment_very_dissatisfied</md-icon>
           </button>
-        </p>
-      </div>
-      <div class="col-sm-2">
-        <h3>Geweldig</h3>
-        <p>
-          <button (click)="add(100)" type="button" class="btn btn-success btn-lg"><img
-            src="http://2.bp.blogspot.com/-C6jk7_J8X0A/UiB-P7jHwRI/AAAAAAAAEgU/31UCwpj8u_Y/s1600/emoticon-24-512.gif"
-            alt="HTML5 Icon" style="width:128px;height:128px;"></button>
-        </p>
+        </md-grid-tile>
 
-        <div class="col-sm-1"></div>
-      </div>
-    </div>
+        <md-grid-tile>
+          <button md-button>
+            <md-icon class="amber" (click)="add(25)">sentiment_dissatisfied</md-icon>
+          </button>
+        </md-grid-tile>
 
+        <md-grid-tile>
+          <button md-button>
+            <md-icon class="yellow" (click)="add(50)">sentiment_neutral</md-icon>
+          </button>
+        </md-grid-tile>
+
+        <md-grid-tile>
+          <button md-button>
+            <md-icon class="lime" (click)="add(75)">sentiment_satisfied</md-icon>
+          </button>
+        </md-grid-tile>
+
+        <md-grid-tile>
+          <button md-button>
+            <md-icon class="green" (click)="add(100)">sentiment_very_satisfied</md-icon>
+          </button>
+        </md-grid-tile>
+      </md-grid-list>
+    </md-card>
   </div>
 
 </div>
+
+
+<!--<md-grid-list cols="5" [style.background]="'white'">-->
+  <!--<md-grid-tile><md-icon>sentiment_very_dissatisfied</md-icon></md-grid-tile>-->
+  <!--<md-grid-tile><md-icon>sentiment_dissatisfied</md-icon></md-grid-tile>-->
+  <!--<md-grid-tile><md-icon>sentiment_neutral</md-icon></md-grid-tile>-->
+  <!--<md-grid-tile><md-icon>sentiment_satisfied</md-icon></md-grid-tile>-->
+  <!--<md-grid-tile><md-icon>sentiment_very_satisfied</md-icon></md-grid-tile>-->
+<!--</md-grid-list>-->
+
+<!--<div class="container">-->
+  <!--<div class="row text-center">-->
+    <!--<h1 style="text-transform: capitalize">{{ id }}</h1>-->
+  <!--</div>-->
+
+  <!--<div class="text-center">-->
+
+    <!--<div class="row row-centered">-->
+      <!--<h2>{{ question }}</h2>-->
+    <!--</div>-->
+
+
+    <!--<div class="container">-->
+      <!--<div class="container-centered">-->
+
+
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<div class="col-sm-1"></div>-->
+
+      <!--<div class="col-sm-2">-->
+        <!--<h3>Heel slecht</h3>-->
+        <!--<p>-->
+          <!--<button (click)="add(1)" type="button" class="btn btn-danger btn-lg"><img-->
+            <!--src="https://www.clipartsgram.com/image/196949517-491537775-classic-emoticonsangry-facesimple-black512x512.png"-->
+            <!--alt="HTML5 Icon" style="width:128px;height:128px;"></button>-->
+        <!--</p>-->
+      <!--</div>-->
+      <!--<div class="col-sm-2">-->
+        <!--<h3>Slecht</h3>-->
+        <!--<p>-->
+          <!--<button (click)="add(25)" type="button" class="btn btn-warning btn-lg"><img-->
+            <!--src="http://www.clipartbest.com/cliparts/9iz/ozp/9izozpeAT.gif" alt="HTML5 Icon"-->
+            <!--style="width:128px;height:128px;"></button>-->
+        <!--</p>-->
+      <!--</div>-->
+      <!--<div class="col-sm-2">-->
+        <!--<h3>Voldoende</h3>-->
+        <!--<p>-->
+          <!--<button (click)="add(50)" type="button" class="btn btn-default btn-lg"><img-->
+            <!--src="https://image.freepik.com/freie-ikonen/emoticon-mit-geraden-mund-linie_318-47272.jpg" alt="HTML5 Icon"-->
+            <!--style="width:128px;height:128px;"></button>-->
+        <!--</p>-->
+        <!--<p></p>-->
+      <!--</div>-->
+      <!--<div class="col-sm-2">-->
+        <!--<h3>Goed</h3>-->
+        <!--<p>-->
+          <!--<button (click)="add(75)" type="button" class="btn btn-info btn-lg"><img-->
+            <!--src="http://simpleicon.com/wp-content/uploads/smile.png" alt="HTML5 Icon" style="width:128px;height:128px;">-->
+          <!--</button>-->
+        <!--</p>-->
+      <!--</div>-->
+      <!--<div class="col-sm-2">-->
+        <!--<h3>Geweldig</h3>-->
+        <!--<p>-->
+          <!--<button (click)="add(100)" type="button" class="btn btn-success btn-lg"><img-->
+            <!--src="http://2.bp.blogspot.com/-C6jk7_J8X0A/UiB-P7jHwRI/AAAAAAAAEgU/31UCwpj8u_Y/s1600/emoticon-24-512.gif"-->
+            <!--alt="HTML5 Icon" style="width:128px;height:128px;"></button>-->
+        <!--</p>-->
+
+        <!--<div class="col-sm-1"></div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+  <!--</div>-->
+
+<!--</div>-->
