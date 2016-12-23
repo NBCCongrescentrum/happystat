@@ -1,35 +1,50 @@
 <div class="body">
   <div class="container">
-    <md-card>
-      <h1>HOE BEVALT DE KERSTBORREL?</h1>
-      <hr>
-      <md-grid-list cols="5">
-        <md-grid-tile>
-          <button md-button (click)="add(1)">
-            <md-icon class="red">sentiment_very_dissatisfied</md-icon>
-          </button>
-        </md-grid-tile>
-        <md-grid-tile>
-          <button md-button (click)="add(25)">
-            <md-icon class="amber">sentiment_dissatisfied</md-icon>
-          </button>
-        </md-grid-tile>
-        <md-grid-tile>
-          <button md-button (click)="add(50)">
-            <md-icon class="yellow">sentiment_neutral</md-icon>
-          </button>
-        </md-grid-tile>
-        <md-grid-tile>
-          <button md-button (click)="add(75)">
-            <md-icon class="lime">sentiment_satisfied</md-icon>
-          </button>
-        </md-grid-tile>
-        <md-grid-tile>
-          <button md-button (click)="add(100)">
-            <md-icon class="green">sentiment_very_satisfied</md-icon>
-          </button>
-        </md-grid-tile>
-      </md-grid-list>
-    </md-card>
+    <div *ngIf="questions">
+      <md-card>
+        <h1>HOE BEVALT DE KERSTBORREL?</h1>
+        <hr>
+        <md-grid-list cols="5">
+          <md-grid-tile>
+            <button md-button (click)="add(1)">
+              <md-icon class="red">sentiment_very_dissatisfied</md-icon>
+            </button>
+          </md-grid-tile>
+
+          <md-grid-tile>
+            <button md-button (click)="add(25)">
+              <md-icon class="amber">sentiment_dissatisfied</md-icon>
+            </button>
+          </md-grid-tile>
+
+          <md-grid-tile>
+            <button md-button (click)="add(50)">
+              <md-icon class="yellow">sentiment_neutral</md-icon>
+            </button>
+          </md-grid-tile>
+
+          <md-grid-tile>
+            <button md-button (click)="add(75)">
+              <md-icon class="lime">sentiment_satisfied</md-icon>
+            </button>
+          </md-grid-tile>
+
+          <md-grid-tile>
+            <button md-button (click)="add(100)">
+              <md-icon class="green">sentiment_very_satisfied</md-icon>
+            </button>
+          </md-grid-tile>
+        </md-grid-list>
+      </md-card>
+    </div>
+    <div *ngIf="!questions">
+      <md-card>
+        <h1>BEDANKT VOOR UW INPUT!</h1>
+        <hr>
+        <md-card-content>
+          <h3>"Voor vragen of klachten kunt u altijd terecht bij een van onze medewerkers"</h3>
+        </md-card-content>
+      </md-card>
+    </div>
   </div>
 </div>

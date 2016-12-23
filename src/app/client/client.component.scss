@@ -18,6 +18,12 @@ md-card {
   text-align: center;
 }
 
+md-card {
+  md-card-content {
+    padding: 100px 0;
+  }
+}
+
 .body {
   width: 100%;
   height: 100%;
