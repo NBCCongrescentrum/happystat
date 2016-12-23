@@ -10,7 +10,7 @@ export interface IScore {
 
 @Injectable()
 export class StatsService {
-  private url = 'http://localhost:4300';
+  private url = 'https://happy-stat.herokuapp.com';
   private socket;
 
   constructor(private http: Http) {
