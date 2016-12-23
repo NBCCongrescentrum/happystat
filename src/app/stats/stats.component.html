@@ -1,30 +1,31 @@
-
-<!-- Fixed navbar -->
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">HappyStats - Service with a Smile</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Dashboard</a></li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div>
-</nav>
-
 <div class="container">
   <div class="row">
-    <div class="col-xs-6 text-center well well-sm" *ngFor="let location of locations">
-      <p><span class="label label-primary">{{ location.name}}</span></p>
-      <h1 style="font-size: 60px;">{{ location.score }}</h1>
-      <p><b>{{ location.question }}</b></p>
+    <div class="col-sm-12 text-center">
+      <h2>Happy data statistics real-time dashboard</h2>
+      <hr />
+      <div class="stat">
+        <h1><small>Total votes</small>{{ scores.length }}</h1>
+      </div>
+      <div class="stat">
+        <h1><small>Average vote</small>{{ averageScore }}</h1>
+      </div>
+      <div class="bars">
+        <h1><small>Overzicht</small></h1>
+        <ul>
+          <li><span>1</span><div class="bar-test" [style.width]="percentage1+'%'"></div></li>
+          <li><span>25</span><div class="bar-test" [style.width]="percentage25+'%'"></div></li>
+          <li><span>50</span><div class="bar-test" [style.width]="percentage50+'%'"></div></li>
+          <li><span>75</span><div class="bar-test" [style.width]="percentage75+'%'"></div></li>
+          <li><span>100</span><div class="bar-test" [style.width]="percentage100+'%'"></div></li>
+        </ul>
+      </div>
+      <div class="vote-stream" id="live-feed">
+        <ul>
+          <li *ngFor="let score of scores">{{ score }}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
+
+

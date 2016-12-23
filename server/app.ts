@@ -4,7 +4,6 @@ import * as path from 'path';
 import * as cors from 'cors';
 import * as compression from 'compression';
 import * as mongoose from 'mongoose';
-
 // Import app router
 import { AppRouter } from './routes/app';
 
@@ -54,3 +53,5 @@ app.use(function(err: any, req: express.Request, res: express.Response, next: ex
 });
 
 export { app }
+
+

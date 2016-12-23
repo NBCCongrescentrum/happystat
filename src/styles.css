@@ -1,19 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-  padding-top: 65px;
+.vote-stream {
+  height: 200px;
+  overflow-y: scroll;
+  background-color: lightgray;
 }
 
-.main {
-  width: 800px;
-  padding: 20px;
+.stat > h1 > small {
+  display: block;
 }
 
-.comment {
-  border: 2px dashed #ccc;
-  margin: 0px 10px;
-  padding: 10px;
-}
-
-.field.error > * {
-  background: lightcoral;
+.bar-test {
+  background-color: #000;
+  height: 20px;
+  width: 100%;
 }

@@ -7,6 +7,7 @@
 import { app } from '../app';
 import { serverPort } from '../config';
 import * as http from 'http';
+import { Score } from '../models/score';
 
 /**
  * Get port from environment and store in Express.
@@ -18,6 +19,33 @@ app.set('port', port);
  * Create HTTP server.
  */
 const server = http.createServer(app);
+
+/**
+ * Add sockets
+ */
+var io = require('socket.io')(server);
+io.on('connection', (socket) => {
+  console.log('client connected');
+
+  socket.on('disconnect', function(){
+    console.log('client disconnected');
+  });
+
+  socket.on('score:register', (score) => {
+    console.log('new score event', score);
+
+    const res =  Score.create({
+      'score': score
+    }).then(res => {
+      console.log('new score saved', res);
+      io.emit('score', {
+        type:'score:new',
+        data: score
+      });
+    });
+  });
+});
+
 
 /**
  * Listen on provided port, on all network interfaces.
