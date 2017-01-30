@@ -2,7 +2,7 @@
   <div class="container">
     <div *ngIf="questions">
       <md-card>
-        <h1>HOE BEVALT DE KERSTBORREL?</h1>
+        <h1>HOE ERVAART U DE NBC EXPERIENCE?</h1>
         <hr>
         <md-grid-list cols="5">
           <md-grid-tile>
@@ -38,7 +38,7 @@
       </md-card>
     </div>
     <div *ngIf="!questions">
-      <md-card>
+      <md-card (click)="questions = true">
         <h1>BEDANKT VOOR UW INPUT!</h1>
         <hr>
         <md-card-content>
