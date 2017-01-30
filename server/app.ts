@@ -17,7 +17,7 @@ app.use(urlencoded({ extended: true }));
 
 // allow cors only for local dev
 app.use(cors({
-  origin: 'http://localhost:4200'
+  origin: '*'
 }));
 
 // app.set('env', 'production');
